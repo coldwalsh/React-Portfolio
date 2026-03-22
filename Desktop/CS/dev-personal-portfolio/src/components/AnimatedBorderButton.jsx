@@ -16,7 +16,15 @@ export const AnimatedBorderButton = () => {
         style={{ overflow: "visible" }}
       >
         <path
-          d="M 30,1 A 29,29 0 0 0 1,30 L 1,30 A 29,29 0 0 0 30,59 L 200,30"
+          d="
+            M 30 1
+            H 170
+            A 29 29 0 0 1 199 30
+            A 29 29 0 0 1 170 59
+            H 30
+            A 29 29 0 0 1 1 30
+            A 29 29 0 0 1 30 1
+        "
           fill="none"
           stroke="var(--color-primary)"
           strokeWidth="2"
@@ -24,11 +32,11 @@ export const AnimatedBorderButton = () => {
           strokeDashoffset="400"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="download-cv-path"
+          className="animated-border-path"
         />
       </svg>
 
-      <span className="inline-flex items-center gap-2">
+      <span className="relative z-10 flex items-center justify-center gap-2">
         <Download className="w-5 h-5" />
         Download CV
       </span>
