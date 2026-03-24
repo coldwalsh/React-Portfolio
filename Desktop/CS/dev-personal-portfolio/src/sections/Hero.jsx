@@ -40,7 +40,7 @@ export const Hero = () => {
             </div>
 
             {/* Content */}
-            <div className="container mx-auto px-6 pt-32 pb-20 realtive z-10">
+            <div className="container -auto px-6 pt-32 pb-20 realtive z-10">
                 <div className="grid lg:grid-cols-2 gap-12">
                     {/* Left Column - Text Content */}
                     <div className="space-y-8">
@@ -79,8 +79,8 @@ export const Hero = () => {
                             <span className="text-sm text-muted-foreground">Follow: </span>
                             {/* Put Link to Github account */}
                             {[
-                                {icon: Github, href: "#"},
-                                {icon: Linkedin, href: "#"},
+                                {icon: Github, href: "https://github.com/coldwalsh"},
+                                {icon: Linkedin, href: "https://www.linkedin.com/in/colin-w-1694b1262/"},
                             ].map((social, idx) => (
                                 <a 
                                     key={idx} 
@@ -129,7 +129,7 @@ export const Hero = () => {
                 {/* Skills Section */}
                 <div className="mt-20 animate-fade-in animation-delay-600">
                     <p className="text-sm text-muted-foreground mb-6 text-center">
-                        Technologiegs I work with:
+                        Technologies I work with:
                     </p>
                     <div className="relative overflow-hidden">
                         <div className="flex animate-marquee">
