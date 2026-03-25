@@ -52,9 +52,9 @@ export const About = () => {
                 </div>
 
                 {/* Mission Statement */}
-                <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300 mb-6">
+                <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300 mb-6 animate-pulse">
                     <p className="text-lg font-medium italic text-foreground">
-                        "This is my mission statement"
+                        "Life should not be a journey to the grave with the intention of arriving safely in a pretty and well preserved body, but rather to skid in broadside in a cloud of smoke, thoroughly used up, totally worn out, and loudly proclaiming "Wow! What a Ride! - Hunter S. Thompson"
                     </p>
                 </div>
             </div>
