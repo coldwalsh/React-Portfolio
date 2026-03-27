@@ -44,21 +44,15 @@ export const Hero = () => {
                 <div className="grid lg:grid-cols-2 gap-12">
                     {/* Left Column - Text Content */}
                     <div className="space-y-8">
-                        <div className="animate-fade-in">
-                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
-                                <span className="w-2 h-2 bg-primary rounded-full animate-pulse"/>
-                                Software Engineer 
-                                
-                            </span>
-                        </div>
+                        
                         <div className="space-y-4">
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                                Software <span className="text-primary glow-text"> Engineer</span>
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
+                                <span className="text-primary glow-text">Software Engineer,</span>
                                 <br />
-                                Outdoor Enthusiast
+                                <span> Outdoor Enthusiast,</span>
                                 <br />
                                 <span className="font-serif italic font-normal text-white">
-                                    Creator.
+                                    Creator of things.
                                 </span>
                             </h1>
                             <p className="text-lg text-muted-foreground font-serif max-w-lg animate-fade-in animation-delay-200">
@@ -95,7 +89,7 @@ export const Hero = () => {
                         </div>
                     </div>
                     {/* Right Column - Profile Image */}
-                    <div className="realtive animate-fade-in animation-delay-300">
+                    <div className="relative animate-fade-in animation-delay-300">
                         <div className="relative max-w-md mx-auto">
                             <div
                                 className="absolute inset-0
@@ -104,24 +98,29 @@ export const Hero = () => {
                                 to-primary/10 blur-2xl animate-pulse"
                             >
                             </div>
-                            <div className="rlative glass rounded-3xl p-2 glow-border">
-                                <img src="/hero.jpeg" alt="Colin Walsh" className="w-full aspect-4/5 object-cover rounded-2xl"/>
+                            <div className="relative glass rounded-3xl p-2 glow-border">
+                                <img
+                                    src="/hero.jpeg"
+                                    alt="Colin Walsh"
+                                    className="w-full aspect-4/5 object-cover rounded-2xl opacity-0 transition-opacity duration-700"
+                                    onLoad={(e) => e.target.classList.replace("opacity-0", "opacity-100")}
+                                />
 
                                 {/* Floating Badge */}
                                 <div className="absolute -bottom-4 -right-4 bg-black rounded-xl px-4 py-3 animate-float">
                                     <div className="flex itmes-center gap-3">
                                         <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                                             <span className="text-sm font-medium">
-                                                Please Hire Me
+                                                Available for Work
                                             </span>
                                     </div>
                                 </div>
 
                                 {/* Stats Badge */}
                                 <div className="absolute -top-4 -left-4 bg-black rounded-xl px-4 py-3 animate-float animation-delay-500">
-                                    <div className="text-2xl font-bold text-primary">0+</div>
+                                    <div className="text-md font-bold text-primary">Entry-Level</div>
                                     <div className="text-xs text-muted-foreground">
-                                        Years Exp. 
+                                        Position 
                                     </div>
                                 </div>
                             </div>   

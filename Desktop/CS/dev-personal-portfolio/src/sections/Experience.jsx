@@ -26,15 +26,6 @@ const experiences = [
         tags: ["Trip Planning", "Safety", "Team Leadership"],
         side: "left",
     },
-    {
-        period: "Jun 2020 – Jul 2021",
-        title: "Eagle Scout Project Lead",
-        company: "Boy Scouts of America, Troop 63",
-        description:
-            "Planned and executed construction of two mountain biking and hiking trails at Virginia Episcopal School — a 215-hour community service project. Recruited, scheduled, and supervised volunteer crews across a 13-month timeline; trained workers in safe trail-building techniques and coordinated directly with the school's facilities team.",
-        tags: ["Project Management", "Volunteer Leadership", "Construction"],
-        side: "right",
-    },
 ];
 
 export const Experience = () => {
@@ -62,15 +53,15 @@ export const Experience = () => {
 
                 {/* Timeline */}
                 <div className="relative">
-                    {/* Center vertical line */}
-                    <div className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-linear-to-b from-transparent via-border to-transparent" />
+                    {/* Center vertical line — hidden on mobile */}
+                    <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-linear-to-b from-transparent via-border to-transparent" />
 
-                    <div className="space-y-16">
+                    <div className="space-y-8 md:space-y-16">
                         {experiences.map((exp, i) => (
                             <div key={i} className="relative flex items-start">
-                                {/* Center dot */}
+                                {/* Center dot — hidden on mobile */}
                                 <div
-                                    className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-2 z-10 mt-6 animate-fade-in animate-pulse"
+                                    className="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-2 z-10 mt-6 animate-pulse"
                                     style={{
                                         backgroundColor: "#CC7711",
                                         borderColor: "#CC7711",
@@ -78,23 +69,30 @@ export const Experience = () => {
                                     }}
                                 />
 
+                                {/* Mobile: full-width single column */}
+                                <div
+                                    className="w-full md:hidden animate-fade-in"
+                                    style={{ animationDelay: `${i * 200}ms` }}
+                                >
+                                    <ExperienceCard exp={exp} align="left" />
+                                </div>
+
+                                {/* Desktop: alternating two-column */}
                                 {exp.side === "left" ? (
                                     <>
-                                        {/* Left card — slides in from left */}
                                         <div
-                                            className="w-[calc(50%-2rem)] mr-auto animate-fade-in-left"
+                                            className="hidden md:block w-[calc(50%-2rem)] mr-auto animate-fade-in-left"
                                             style={{ animationDelay: `${i * 200}ms` }}
                                         >
                                             <ExperienceCard exp={exp} align="right" />
                                         </div>
-                                        <div className="w-[calc(50%-2rem)] ml-auto" />
+                                        <div className="hidden md:block w-[calc(50%-2rem)] ml-auto" />
                                     </>
                                 ) : (
                                     <>
-                                        <div className="w-[calc(50%-2rem)] mr-auto" />
-                                        {/* Right card — slides in from right */}
+                                        <div className="hidden md:block w-[calc(50%-2rem)] mr-auto" />
                                         <div
-                                            className="w-[calc(50%-2rem)] ml-auto animate-fade-in-right"
+                                            className="hidden md:block w-[calc(50%-2rem)] ml-auto animate-fade-in-right"
                                             style={{ animationDelay: `${i * 200}ms` }}
                                         >
                                             <ExperienceCard exp={exp} align="left" />

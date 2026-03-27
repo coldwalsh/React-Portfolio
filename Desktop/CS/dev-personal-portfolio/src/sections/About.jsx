@@ -39,24 +39,36 @@ export const About = () => {
                     </div>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-primary">
-                    Building the future, 
+                    Bringing ideas to life, 
                     <span className="font-serif italic font-normal text-white"> 
                     {" "}
-                    one bruh at a time.</span>
+                    one project at a time.</span>
                 </h2>
                 {/* About Me Paragraphs */}
                 <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
-                    <p>My name is Colin </p>
-                    <p>I made this website</p>
-                    <p>Hope you think this is cool</p>
-                </div>
-
-                {/* Mission Statement */}
-                <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300 mb-6 animate-pulse">
-                    <p className="text-lg font-medium italic text-foreground">
-                        "Life should not be a journey to the grave with the intention of arriving safely in a pretty and well preserved body, but rather to skid in broadside in a cloud of smoke, thoroughly used up, totally worn out, and loudly proclaiming "Wow! What a Ride! - Hunter S. Thompson"
+                    <p>
+                        Hello! My name is Colin Walsh. I am undergraduate computer scientist at the University of Virginia, 
+                        graduating in the spring of 2026. With a bachelors of arts in computer science, I've enjoyed a wider 
+                        range of classes during my time at UVA which have provided me with a unique liberal arts background. 
+                        Writing and discussion play a large role in my life as a student and I'm not stranger to team environments.
+                    </p>
+                    <p>
+                        During the past two summers, I've worked as an outdoor educator leading kids on 8-14 day long trips around 
+                        Colorado and New Mexico. These experiences have prepared me well for a more traditional work environment where 
+                        my logistical planning and performance under stress are put to the test. 
+                    </p>
+                    <p className="mb-10">
+                        I'm excited to develop my skills as a software engineer and work in a collaborative team environment where I 
+                        can play an active role in building a product that matters. I hope you like the site!
                     </p>
                 </div>
+
+                {/* Mission Statement
+                <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300 mb-6 animate-pulse">
+                    <p className="text-lg font-medium italic text-foreground">
+                        "Mission Statement"
+                    </p>
+                </div> */}
             </div>
 
             {/* Right Column - Highlights */}
